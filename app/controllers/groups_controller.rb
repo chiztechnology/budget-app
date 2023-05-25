@@ -1,28 +1,36 @@
 class GroupsController < ApplicationController
   def index
-    @groups = current_user.groups.includes(:expenses)
+    @groups = current_user.groups
   end
-
-  def show
-    @group = current_user.groups.find(params[:id])
-    @expenses = @group.expenses.order(created_at: :desc)
-    @total_amount = @expenses.sum(:amount)
-  end
-
-  def expenses; end
 
   def new
+    @current_user = current_user
     @group = Group.new
   end
 
-  def create
-    @group = current_user.groups.new(group_params)
+  def destroy
+    @group = Group.find(params[:id]).destroy
+    respond_to do |f|
+      f.html { redirect_to group_path(@group), notice: 'The Category has been deleted successfully' }
+    end
+  end
 
+  def create
+    @current_user = current_user
+    @group = Group.new(group_params)
+    @group.user = @current_user
     if @group.save
-      redirect_to groups_path, notice: 'Group was successfully created.'
+      redirect_to groups_path
     else
       render :new
     end
+  end
+
+  def show
+    @group = Group.find(request.params['id'])
+    @current_user = current_user
+    @entities = Entity.joins(:entities_groups).where(entities_groups: { group_id: @group.id },
+                                                     user_id: @current_user.id).order(created_at: :desc)
   end
 
   private

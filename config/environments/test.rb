@@ -26,6 +26,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
@@ -57,9 +58,4 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
-
-  # Add mailer to test
-
-  config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

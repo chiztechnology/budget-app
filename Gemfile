@@ -3,6 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.1'
 
+gem 'devise'
+
+gem 'cancancan'
+
+gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'rswag'
+
+gem 'dotenv'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
@@ -42,26 +52,20 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+gem 'warden'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-
-# All necessary for personal use
-gem 'rubocop', '>= 1.0', '< 2.0'
-
-gem 'devise'
-
-gem 'cancancan'
-
-gem 'bootstrap', '~> 4.3.1'
-
-gem 'font-awesome-sass', '~> 6.4.0'
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -70,7 +74,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+  gem 'letter_opener'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -78,12 +82,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'factory_bot'
-  gem 'faker'
-  gem 'rails-controller-testing'
-  gem 'rspec'
-  gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'warden'
   gem 'webdrivers'
 end
