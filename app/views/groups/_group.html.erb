@@ -1,0 +1,18 @@
+<div class="card m-3">
+  <div class="g-0 category-card">
+    <div class="d-flex align-items-center">
+      <div class="">
+        <%= image_tag(group.icon, alt: "category icon", class: "category-icon") %>
+      </div>
+      <div class="mx-3">
+        <div class="card-body">
+          <h5 class="card-title fw-bold"><%= group.name %></h5>
+        </div>
+        <span class="category-date"><%= group.created_at.strftime("%d %b %Y")%></span>
+      </div>
+    </div>
+    <div class="">
+      <h4 class="category-total"><%= number_to_currency(group.expenses.sum(:amount)) %></h4>
+    </div>
+  </div>
+</div>

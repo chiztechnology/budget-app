@@ -1,0 +1,16 @@
+<div class="card expenses-container p-2">
+  <div class="g-0 d-flex align-items-center justify-content-between p-2">
+    <div class="d-flex flex-column gap-2 align-items-start">
+      <div class="d-flex">
+        <h3 class="expenses-detail">Transaction N°<%= expense.id%></h3>
+        <h4 class="expenses-body"><%= expense.name %></h5>
+      </div>
+      <div>
+        <span class="category-date"><%= expense.created_at.strftime("%d %b %Y")%></span>
+      </div>
+    </div>
+    <div class="">
+      <h5 class="expenses-amount"><%= number_to_currency(expense.amount) %></h4>
+    </div>
+  </div>
+</div>

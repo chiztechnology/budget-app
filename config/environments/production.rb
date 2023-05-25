@@ -22,7 +22,20 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV["RENDER"].present?
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'https://transaction-trove.onrender.com', protocol: 'https' }
+
+  config.action_mailer.smtp_settings = {
+    address: 'smtp-relay.sendinblue.com',
+    port: 587,
+    user_name: 'ghoseprangon@gmail.com',
+    password: 'U8gdwSB4PFh7G3DY',
+    authentication: 'login',
+    enable_starttls_auto: true
+  }
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -60,7 +73,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "budget_app_production"
+  # config.active_job.queue_name_prefix = "TransactionTrove_production"
 
   config.action_mailer.perform_caching = false
 

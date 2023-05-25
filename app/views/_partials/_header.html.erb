@@ -1,0 +1,10 @@
+<nav class="navbar mobile-header">
+  <%= link_to back_path, class: "back-button" do%>
+    <span><i class="fa fa-arrow-left" style="color: white; font-size: 1.5rem"></i></span>
+  <% end %>
+  <h3 class="header-title"><%= title.upcase %></h3>
+  <%= button_to destroy_user_session_path, method: :delete, class: "btn btn-danger" do%>
+    <span>Log out</span>
+    <i class="fa fa-sign-out"></i>
+  <%end%>
+</nav>
