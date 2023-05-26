@@ -21,6 +21,7 @@
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
 # 📖 The Recipe App <a name="about-project"></a>
@@ -165,6 +166,14 @@ Feel free to check the [issues page](https://github.com/HunterX-7/Recipe-App/iss
 ## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse for project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
