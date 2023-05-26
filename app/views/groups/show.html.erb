@@ -10,15 +10,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "About", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Contact", root_path, class: "nav-link" %>
-          </li>
+        <li class="nav-item">
+        <%= link_to "Category", root_path, class: "nav-link text-light" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Logout", root_path, class: "nav-link text-light" %>
+      </li>
         </ul>
       </div>
     </div>
@@ -38,7 +35,7 @@
       </div>
       <div class="col-12">
         <p class="lead">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis augue ac enim lacinia ullamcorper.
+          List of transactions for this category
         </p>
         <hr>
         <% @entities.each do |entity| %>
