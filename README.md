@@ -80,6 +80,10 @@ Optionally, in order to modify this project you should to have installed:
 
 - [ ] Code editor like: [Visual Studio code](https://code.visualstudio.com/), or others...
 
+### Video Demo
+
+click on [this link below](https://www.loom.com/share/d164bd5894e0469fb189634ee7cc8fb6) to view the main features explained in video.
+
 ### Setup
 
 To clone this repository to your desired folder:
