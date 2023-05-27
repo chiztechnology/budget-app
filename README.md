@@ -13,6 +13,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -65,6 +66,20 @@ This project was implemented using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Link to my deployed project.
+
+- [Live Demo Link](https://budget-software.onrender.com/)
+
+> Link to the video presenting features of the project.
+
+- [Vide Record](https://www.loom.com/share/d164bd5894e0469fb189634ee7cc8fb6)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps:
@@ -81,9 +96,6 @@ Optionally, in order to modify this project you should to have installed:
 
 - [ ] Code editor like: [Visual Studio code](https://code.visualstudio.com/), or others...
 
-### Video Demo
-
-click on [this link below](https://www.loom.com/share/d164bd5894e0469fb189634ee7cc8fb6) to view the main features explained in video.
 
 ### Setup
 
