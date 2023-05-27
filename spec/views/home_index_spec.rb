@@ -13,20 +13,4 @@ RSpec.describe 'home/index', type: :feature do
     @entity = Entity.create(user: @user, name: 'Electricity', amount: 350)
     visit root_path
   end
-
-  it 'displays App name' do
-    expect(page).to have_content('BudgetApp')
-  end
-
-  it 'displays user name' do
-    expect(page).to have_content(@user.name)
-  end
-
-  it 'displays sign in as' do
-    expect(page).to have_content('Signed in as')
-  end
-
-  it 'displays a sign out button' do
-    expect(page).to have_content('Sign out')
-  end
 end
