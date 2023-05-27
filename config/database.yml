@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
+  # host: dpg-chp31ru7avjb90hndn60-a
   url: <%= ENV["MY_APP_DATABASE_URL"] %>
   database: budgetapp_utzn
   username: israel
