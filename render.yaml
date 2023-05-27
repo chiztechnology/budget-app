@@ -1,0 +1,18 @@
+databases:
+  - name: postgres
+    databaseName: budget-app
+    user: israel
+
+services:
+  - type: web
+    name: mysite
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: postgres://israel:v1U3mfTt3pfKVujWrPUx4om5dAKNrnj3@dpg-chp31ru7avjb90hndn60-a/budgetapp_utzn
+        fromDatabase:
+          name: mysite
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
