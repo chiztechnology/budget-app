@@ -1,0 +1,58 @@
+<nav class="navbar navbar-collapse navbar-primary bg-primary">
+  <div class="container-fluid">
+    <div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <%= link_to "Category", root_path, class: "nav-link text-light" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Logout", root_path, class: "nav-link text-light" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="navbar-brand mb-0 text-light p-3">CATEGORIES</h2>
+    <a style="visibility:hidden;">Logout</a>
+      <div class="container-fluid">
+    <div>
+  </div>
+
+</nav>
+<p class="notice ms-3 mt-3"><%= notice %></p>
+<p class="alert ms-3 mt-3"><%= alert %></p>
+<div class="container-fluid p-3">
+  <ul class="list-group hover">
+    <% @groups.each do |group| %>
+      <% if user_signed_in? && group.user_id == current_user.id %>
+      <li class="list-group-item d-flex rounded border-0 justify-content-between align-items-center mb-3 shadow">
+        <div style="display:flex;">
+          <%= image_tag group.icon, alt: "Group image", class: "me-3" %>
+          <div class="text-center">
+          <h3 class="m-0">
+            <%= link_to group.name, group_path(group), { class: "text-secondary text-decoration-none" } %>
+          </h3>
+          <p class="text-muted m-0">
+            <%= group.updated_at.strftime('%d %b %Y')%>
+          </p>
+        </div>
+        </div>
+       
+        <div class="text-center">
+          <span class="mb-2 fw-bold">
+            $<%= group.entities.sum(:amount) %>
+          </span>
+          <%= button_to "Delete", group_path(group), method: :delete, data: { turbo_confirm: "Are you sure?" }, 
+                class: "badge bg-danger rounded-pill border-0" %>
+        </div>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+<div class="fixed-bottom p-3 row bg-success text-center ">
+  <%= link_to "ADD CATEGORY", new_group_path, class: "btn btn-success btn-custom mx-auto", style: "width: 98%" %>
+</div>
