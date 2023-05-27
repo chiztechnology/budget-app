@@ -75,7 +75,7 @@ This project was implemented using:
 
 > Link to the video presenting features of the project.
 
-- [Vide Record](https://www.loom.com/share/d164bd5894e0469fb189634ee7cc8fb6)
+- [Vide Record](https://www.loom.com/share/b7b897d5368a4f3aa61deaba047d60df)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
